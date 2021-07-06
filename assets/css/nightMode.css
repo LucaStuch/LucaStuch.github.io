@@ -5,7 +5,7 @@ body {
 }
 
 a {
-    color: limegreen;
+    color: #0ABAB5;
     text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ h6 {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: limegreen;
+    background: #0ABAB5;
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -83,7 +83,7 @@ h6 {
     position: fixed;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
-    border: 6px solid limegreen;
+    border: 6px solid #0ABAB5;
     border-top-color: #161515;
     border-bottom-color: #161515;
     border-radius: 50%;
@@ -224,7 +224,7 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
     color: #161515;
-    background: limegreen;
+    background: #0ABAB5;
 }
 
 .nav-menu a:hover span,
@@ -280,7 +280,7 @@ h6 {
 
 .mobile-nav-active .mobile-nav-toggle {
     color: #161515;
-    background-color: limegreen;
+    background-color: #0ABAB5;
 }
 
 
@@ -328,7 +328,7 @@ h6 {
 }
 
 #hero p span {
-    color: limegreen;
+    color: #0ABAB5;
     letter-spacing: 1px;
 }
 
@@ -346,7 +346,7 @@ h6 {
 }
 
 #hero .social-links a:hover {
-    color: limegreen;
+    color: #0ABAB5;
 }
 
 @media (max-width: 992px) {
@@ -406,7 +406,7 @@ section {
     display: block;
     width: 40px;
     height: 3px;
-    background: limegreen;
+    background: #0ABAB5;
     bottom: 0;
     left: calc(50% - 20px);
 }
@@ -444,7 +444,7 @@ section {
 .about .content ul i {
     font-size: 16px;
     margin-right: 5px;
-    color: limegreen;
+    color: #0ABAB5;
     line-height: 0;
 }
 
@@ -472,7 +472,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px;
-    background: limegreen;
+    background: #0ABAB5;
     color: #161515;
     border-radius: 50px;
     display: inline-flex;
@@ -531,7 +531,7 @@ section {
     width: 1px;
     height: 10px;
     transition: .9s;
-    background-color: limegreen;
+    background-color: #0ABAB5;
 }
 
 
@@ -550,7 +550,7 @@ section {
 .resume .resume-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid limegreen;
+    border-left: 2px solid #0ABAB5;
     position: relative;
 }
 
@@ -560,13 +560,13 @@ section {
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: limegreen;
+    color: #0ABAB5;
     margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
     font-size: 16px;
-    background: limegreen;
+    background: #0ABAB5;
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
@@ -594,7 +594,7 @@ section {
     left: -9px;
     top: 0;
     background: #161515;
-    border: 2px solid limegreen;
+    border: 2px solid #0ABAB5;
 }
 
 
@@ -631,7 +631,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-    color: limegreen;
+    color: #0ABAB5;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -779,11 +779,11 @@ section {
     height: 12px;
     background-color: #161515;
     opacity: 1;
-    border: 1px solid limegreen;
+    border: 1px solid #0ABAB5;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: limegreen;
+    background-color: #0ABAB5;
 }
 
 .portfolio-details .portfolio-info {
@@ -1025,11 +1025,11 @@ section {
     height: 12px;
     background-color: #161515;
     opacity: 1;
-    border: 1px solid limegreen;
+    border: 1px solid #0ABAB5;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: limegreen;
+    background-color: #0ABAB5;
 }
 
 @media (min-width: 992px) {
@@ -1050,7 +1050,7 @@ section {
 
 .contact .info i {
     font-size: 20px;
-    color: limegreen;
+    color: #0ABAB5;
     float: left;
     width: 44px;
     height: 44px;
@@ -1085,7 +1085,7 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-    background: limegreen;
+    background: #0ABAB5;
     color: #161515;
 }
 
@@ -1156,7 +1156,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-    background: limegreen;
+    background: #0ABAB5;
     border: 0;
     padding: 10px 35px;
     color: #161515;
@@ -1222,7 +1222,7 @@ section {
 #footer .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: limegreen;
+    background: #0ABAB5;
     color: #161515;
     line-height: 1;
     padding: 8px 0;
