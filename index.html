@@ -11,6 +11,7 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -811,19 +812,30 @@
 
 <script>
     $().ready(function() {
+        var userThemePreference = $.cookie('userThemePreference');
+        if(userThemePreference!=='day'){
+            $.cookie('userThemePreference', 'day', {expires: 7, path: '/'});
+            $("#styleContainer").attr("href", "assets/css/dayMode.css");
+            $("#changeMode").attr("currentMode", "day");
+            $("#modeIcon").attr("class", "bx bx-moon");
+            $("#spanMode").text("Night Mode");
+        }
         $("#ageSpan").text(((new Date().getTime() - new Date('1996', '08', '22').getTime()) / (365 * 1000 * 3600 * 24)).toString().split('.')[0]);
         $('#gitIcons').carousel();
         $('#mobileCarousel').carousel();
     })
 
     $("#changeMode").click(function() {
+        
         var currentMode = $("#changeMode").attr("currentMode");
         if (currentMode === "day") {
+            $.cookie('userThemePreference', 'night', {expires: 7, path: '/'});
             $("#styleContainer").attr("href", "assets/css/nightMode.css");
             $("#changeMode").attr("currentMode", "night");
             $("#modeIcon").attr("class", "bx bx-sun");
             $("#spanMode").text("Day Mode");
         } else {
+            $.cookie('userThemePreference', 'day', {expires: 7, path: '/'});
             $("#styleContainer").attr("href", "assets/css/dayMode.css");
             $("#changeMode").attr("currentMode", "day");
             $("#modeIcon").attr("class", "bx bx-moon");
