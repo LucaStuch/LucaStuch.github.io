@@ -812,13 +812,26 @@
 
 <script>
     $().ready(function() {
+        debugger;
         var userThemePreference = $.cookie('userThemePreference');
-        if(userThemePreference!=='day'){
-            $.cookie('userThemePreference', 'day', {expires: 7, path: '/'});
+        if (userThemePreference !== 'night') {
+            $.cookie('userThemePreference', 'day', {
+                expires: 7,
+                path: '/'
+            });
             $("#styleContainer").attr("href", "assets/css/dayMode.css");
             $("#changeMode").attr("currentMode", "day");
             $("#modeIcon").attr("class", "bx bx-moon");
             $("#spanMode").text("Night Mode");
+        } else {
+            $.cookie('userThemePreference', 'night', {
+                expires: 7,
+                path: '/'
+            });
+            $("#styleContainer").attr("href", "assets/css/nightMode.css");
+            $("#changeMode").attr("currentMode", "night");
+            $("#modeIcon").attr("class", "bx bx-sun");
+            $("#spanMode").text("Day Mode");
         }
         $("#ageSpan").text(((new Date().getTime() - new Date('1996', '08', '22').getTime()) / (365 * 1000 * 3600 * 24)).toString().split('.')[0]);
         $('#gitIcons').carousel();
@@ -826,16 +839,22 @@
     })
 
     $("#changeMode").click(function() {
-        
+
         var currentMode = $("#changeMode").attr("currentMode");
         if (currentMode === "day") {
-            $.cookie('userThemePreference', 'night', {expires: 7, path: '/'});
+            $.cookie('userThemePreference', 'night', {
+                expires: 7,
+                path: '/'
+            });
             $("#styleContainer").attr("href", "assets/css/nightMode.css");
             $("#changeMode").attr("currentMode", "night");
             $("#modeIcon").attr("class", "bx bx-sun");
             $("#spanMode").text("Day Mode");
         } else {
-            $.cookie('userThemePreference', 'day', {expires: 7, path: '/'});
+            $.cookie('userThemePreference', 'day', {
+                expires: 7,
+                path: '/'
+            });
             $("#styleContainer").attr("href", "assets/css/dayMode.css");
             $("#changeMode").attr("currentMode", "day");
             $("#modeIcon").attr("class", "bx bx-moon");
