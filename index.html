@@ -97,7 +97,7 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+                        <img id="proPic" src="assets/img/dayMode/profile-img.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-8 pt-4 pt-lg-0 content">
                         <br>
@@ -813,53 +813,38 @@
 
 <script>
     $().ready(function() {
-        debugger;
-        var userThemePreference = $.cookie('userThemePreference');
-        if (userThemePreference !== 'night') {
-            $.cookie('userThemePreference', 'day', {
-                expires: 7,
-                path: '/'
-            });
-            $("#styleContainer").attr("href", "assets/css/dayMode.css");
-            $("#changeMode").attr("currentMode", "day");
-            $("#modeIcon").attr("class", "bx bx-moon");
-            $("#spanMode").text("Night Mode");
-        } else {
-            $.cookie('userThemePreference', 'night', {
-                expires: 7,
-                path: '/'
-            });
-            $("#styleContainer").attr("href", "assets/css/nightMode.css");
-            $("#changeMode").attr("currentMode", "night");
-            $("#modeIcon").attr("class", "bx bx-sun");
-            $("#spanMode").text("Day Mode");
-        }
+        $.cookie('userThemePreference') !== 'night' ? ToDayMode() : ToNightMode();
         $("#ageSpan").text(((new Date().getTime() - new Date('1996', '08', '22').getTime()) / (365 * 1000 * 3600 * 24)).toString().split('.')[0]);
         $('#gitIcons').carousel();
         $('#mobileCarousel').carousel();
     })
 
     $("#changeMode").click(function() {
-
-        var currentMode = $("#changeMode").attr("currentMode");
-        if (currentMode === "day") {
-            $.cookie('userThemePreference', 'night', {
-                expires: 7,
-                path: '/'
-            });
-            $("#styleContainer").attr("href", "assets/css/nightMode.css");
-            $("#changeMode").attr("currentMode", "night");
-            $("#modeIcon").attr("class", "bx bx-sun");
-            $("#spanMode").text("Day Mode");
-        } else {
-            $.cookie('userThemePreference', 'day', {
-                expires: 7,
-                path: '/'
-            });
-            $("#styleContainer").attr("href", "assets/css/dayMode.css");
-            $("#changeMode").attr("currentMode", "day");
-            $("#modeIcon").attr("class", "bx bx-moon");
-            $("#spanMode").text("Night Mode");
-        }
+        debugger;
+        $("#changeMode").attr("currentMode") === "day" ? ToNightMode() : ToDayMode();
     });
+
+    function ToDayMode() {
+        $.cookie('userThemePreference', 'day', {
+            expires: 7,
+            path: '/'
+        });
+        $("#proPic").attr("src", "assets/img/dayMode/profile-img.jpg");
+        $("#styleContainer").attr("href", "assets/css/dayMode.css");
+        $("#changeMode").attr("currentMode", "day");
+        $("#modeIcon").attr("class", "bx bx-moon");
+        $("#spanMode").text("Night Mode");
+    }
+
+    function ToNightMode() {
+        $.cookie('userThemePreference', 'night', {
+            expires: 7,
+            path: '/'
+        });
+        $("#proPic").attr("src", "assets/img/nightMode/profile-img.jpg");
+        $("#styleContainer").attr("href", "assets/css/nightMode.css");
+        $("#changeMode").attr("currentMode", "night");
+        $("#modeIcon").attr("class", "bx bx-sun");
+        $("#spanMode").text("Day Mode");
+    }
 </script>
