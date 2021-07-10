@@ -1256,25 +1256,23 @@ section {
     background-clip: text;
 }
 
+
 /*--------------------------------------------------------------
 # SideBar
 --------------------------------------------------------------*/
-body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: transparent !important;        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: #0ABAB5 !important;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    background-image: -webkit-gradient(linear,
-                     left bottom,
-                     left top,
-                     color-stop(0.44, #afbebe),
-                     color-stop(0.72, #41b4b0),
-                     color-stop(0.86, #20a7a2));
-  }
 
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent !important;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0ABAB5 !important;
+    border-radius: 20px;
+    /*background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #0ABAB5), color-stop(0.72, #0ABAB5), color-stop(0.86, #0ABAB5));*/
+}

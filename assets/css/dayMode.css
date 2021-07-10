@@ -1267,22 +1267,17 @@ section {
 /*--------------------------------------------------------------
 # SideBar
 --------------------------------------------------------------*/
+
 body::-webkit-scrollbar {
     width: 12px;
-  }
-  
-  body::-webkit-scrollbar-track {
+}
+
+body::-webkit-scrollbar-track {
     background: transparent !important;
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0563bb !important;
     border-radius: 20px;
-    
-    background-image: -webkit-gradient(linear,
-                     left bottom,
-                     left top,
-                     color-stop(0.44, rgb(151, 173, 216)),
-                     color-stop(0.72, rgb(77, 139, 214)),
-                     color-stop(0.86, #0563bb));
-  }
+    /*background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(151, 173, 216)), color-stop(0.72, rgb(77, 139, 214)), color-stop(0.86, #0563bb));*/
+}
