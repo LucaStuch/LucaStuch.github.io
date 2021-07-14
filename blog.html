@@ -10,8 +10,10 @@
     <meta content="" name="keywords">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="assets/js/commonFunctions.js" type="text/javascript"></script>
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -21,7 +23,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -32,8 +36,11 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link id="styleContainer" href="assets/css/dayMode.css" rel="stylesheet">
-    <link id="styleContainer" href="assets/css/test.css" rel="stylesheet">
+    <script type="text/javascript">
+        if ($.cookie('userThemePreference') === undefined || $.cookie('userThemePreference') !== 'night') document.write('<link id="styleContainer" href="assets/css/dayMode.css" rel="stylesheet">');
+        else document.write('<link id="styleContainer" href="assets/css/nightMode.css" rel="stylesheet">');
+    </script>
+    <!-- <link id="styleContainer" href="assets/css/dayMode.css" rel="stylesheet"> -->
 
     <!-- =======================================================
   * Template Name: MyResume - v4.3.0
@@ -53,30 +60,15 @@
     <header id="header" class="d-flex flex-column justify-content-center">
         <nav id="navbar" class="navbar nav-menu">
             <ul>
-                <li><a href="./index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span class="heroSpan">Back to Home</span></a></li>
-                <li><a id="changeMode" currentMode="day" class="nav-link scrollto"><i id="modeIcon" class='bx bx-moon'></i> <span id="spanMode" class="heroSpan">Night Mode</span></a></li>
+                <li><a href="./index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span
+                            class="heroSpan">Back to Home</span></a></li>
+                <li><a id="changeMode" currentMode="day" class="nav-link scrollto"><i id="modeIcon"
+                            class='bx bx-moon'></i> <span id="spanMode" class="heroSpan">Night Mode</span></a></li>
             </ul>
         </nav>
         <!-- .nav-menu -->
     </header>
     <!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
-        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Luca Stucchi</h1>
-            <p>I'm <span class="typed" data-typed-items="a Developer, an Architect, Human"></span></p>
-            <div class="social-links">
-                <a target="_blank" href="mailto:luca.stucchi.96@gmail.com" class="email"><i
-                        class="bx bx-envelope"></i></a>
-                <a target="_blank" href="https://www.instagram.com/luca.stuch/" class="instagram"><i
-                        class="bx bxl-instagram"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/lucastucchi96/" class="linkedin"><i
-                        class="bx bxl-linkedin"></i></a>
-            </div>
-        </div>
-    </section>
-    <!-- End Hero -->
 
     <main id="main">
 
@@ -86,12 +78,14 @@
 
                 <div class="section-title">
                     <h2>About</h2>
-                    <p>Here's to you a brief resume of my personal informations, feel free to download my <a download="CV_Luca_Stucchi" href="assets/files/CV_Luca_Stucchi.pdf " target="_blank">Curriculum Vitae</a> or contact me if you need further informations.</p>
+                    <p>Here's to you a brief resume of my personal informations, feel free to download my <a
+                            download="CV_Luca_Stucchi" href="assets/files/CV_Luca_Stucchi.pdf "
+                            target="_blank">Curriculum Vitae</a> or contact me if you need further informations.</p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <img id="proPic" src="assets/img/dayMode/profile-img.jpg" class="img-fluid" alt="">
+                        <!-- <img id="proPic" src="assets/img/dayMode/profile-img.jpg" class="img-fluid" alt=""> -->
                     </div>
                     <div class="col-lg-8 pt-4 pt-lg-0 content">
                         <br>
@@ -102,10 +96,13 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class='bx bxs-chevron-right'></i> <strong>Birth Date:</strong> <span>22<sup>nd</sup> August
-                                            1996</span></li>
+                                    <li><i class='bx bxs-chevron-right'></i> <strong>Birth Date:</strong>
+                                        <span>22<sup>nd</sup> August
+                                            1996</span>
+                                    </li>
                                     <li><i class='bx bxs-chevron-right'></i> <strong>Degree:</strong>
-                                        <span>Bachelor Degree</span></li>
+                                        <span>Bachelor Degree</span>
+                                    </li>
                                     <li><i class='bx bxs-chevron-right'></i> <strong>Email Contact:</strong>
                                         <span>luca.stucchi.96@gmail.com</span>
                                     </li>
@@ -116,23 +113,29 @@
                             </div>
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class='bx bxs-chevron-right'></i> <strong>Age:</strong> <span id="ageSpan"></span></li>
+                                    <li><i class='bx bxs-chevron-right'></i> <strong>Age:</strong> <span
+                                            id="ageSpan"></span></li>
                                     <li><i class='bx bxs-chevron-right'></i> <strong>City:</strong> <span>Sulbiate,
                                             Monza e Brianza, Italy</span></li>
                                     <li><i class='bx bxs-chevron-right'></i> <strong>Phone:</strong> <span>(+39)
                                             3406738867</span></li>
                                     <li><i class='bx bxs-chevron-right'></i> <strong>Looking for a job:</strong>
-                                        <span><i class='bx bx-x-circle'></i></span></li>
+                                        <span><i class='bx bx-x-circle'></i></span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <br>
                         <p>
-                            My favourite things are: videogames, books, food and football, if you can offer me one of these we're definitely friends. Someday I'd like to develop my own videogame, if you can help me reach my goal please consider contacting me!
+                            My favourite things are: videogames, books, food and football, if you can offer me one of
+                            these we're definitely friends. Someday I'd like to develop my own videogame, if you can
+                            help me reach my goal please consider contacting me!
                         </p>
                         <br>
                         <p>
-                            My role model is Kobe Bryant, I think he had the best mindset someone's ever had, constantly working and striving to become the best in his field. I try to replicate his behaviour when I can, especially in the working enviroment.
+                            My role model is Kobe Bryant, I think he had the best mindset someone's ever had, constantly
+                            working and striving to become the best in his field. I try to replicate his behaviour when
+                            I can, especially in the working enviroment.
                         </p>
                     </div>
                 </div>
@@ -140,617 +143,6 @@
             </div>
         </section>
         <!-- End About Section -->
-
-        <!-- ======= Facts Section ======= -->
-        <section id="facts" class="facts">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Facts</h2>
-                    <p>Some numbers about my life</p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="count-box">
-                            <i class='bx bx-happy'></i>
-                            <span data-purecounter-start="0" data-purecounter-end="21" data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Developed Websites</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-                        <div class="count-box">
-                            <i class='bx bx-blanket'></i>
-                            <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Projects brought to an end</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
-                        <div class="count-box">
-                            <i class='bx bxs-hourglass'></i>
-                            <span data-purecounter-start="0" data-purecounter-end="561" data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Hours Of Support provided to end users</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Facts Section -->
-
-        <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Hard Skills</h2>
-                </div>
-
-                <div class="row skills-content">
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill">HTML <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">CSS <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">JavaScript <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">React <i class="val">30%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill">Dynamics 365 (CRM) <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">C# <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Bootstrap Framework <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Appian BPM <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <br>
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Soft Skills</h2>
-                </div>
-
-                <div class="row skills-content">
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill">Self Esteem <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Autonomy <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Planning <i class="val">50%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Resource Handling <i class="val">50%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill">Problem Solving<i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Stress and Pressure Handling <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Empathy<i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Team Work <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Skills Section -->
-
-        <!-- ======= Resume Section ======= -->
-        <section id="resume" class="resume">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Resume</h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h3 class="resume-title">Summary</h3>
-                        <div class="resume-item pb-0">
-                            <h4>Luca Stucchi</h4>
-                            <p><em>Full stack developer with 2+ year of experience in web design and Microsoft Dynamics
-                                    365
-                                    development. Also in charge of handling and developing new feature on Appian
-                                    BPM.</em></p>
-                            <ul>
-                                <li>Sulbiate, Province of Monza e Brianza, Italy</li>
-                                <li>(+39) 340 6738867</li>
-                                <li>luca.stucchi.96@gmail.com</li>
-                            </ul>
-                        </div>
-
-                        <h3 class="resume-title">Education</h3>
-                        <div class="resume-item">
-                            <h4>Computer Science University Degree</h4>
-                            <h5>2015 - 2019</h5>
-                            <p><em>Università degli studi di Milano Bicocca, Milano, MI</em></p>
-                            <p>First grade degree in computer science. During this period I had the opportunity to enrich my knowledge on the IT world.</p>
-                            <p>In order to graduate I needed to attend a training intership, I spent this period working for an IT firm that was focusing his business on medical softwares.</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Computer Expert High School Diploma</h4>
-                            <h5>2010 - 2015</h5>
-                            <p><em>I.I.S.S. Alessandro Greppi, Monticello Brianza, LC</em></p>
-                            <p>While studying we were asked to develop and mantain an online platform that monitored the Radon gas levels on other students houses. It was built using agile techniques and git versioning, other than C# and PHP and web development
-                                tools (HTML5, Javascript, jQuery and Ajax)</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="resume-title">Professional Experience</h3>
-                        <div class="resume-item">
-                            <h4>CRM & Operations Expert</h4>
-                            <h5>2021 - Today</h5>
-                            <p><em>Sisal, Milano, MI</em></p>
-                            <ul>
-                                <li>After two years my tasks has changed, beginning to work directly with suppliers and managing IT consultants, having the control on different project's streams</li>
-                                <li>My work quality improved beign able to analyze and develop difficult tasks following the project from the beginning to the end.</li>
-                                <li>I have now the full control on the Appian software both developing and following consultants, interfacing directly with end-users to design and plan the activities
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Junior CRM Expert</h4>
-                            <h5>2019 - 2021</h5>
-                            <p><em>Sisal, Milano, MI</em></p>
-                            <ul>
-                                <li>My main tasks were concerning the Dynamics 365 CRM, developing plugins and webresources to enlarge the system features list. Moreover I developed different websites both front end and back end, mainly using MVC approach
-                                    with C# base language and the canonical web design languages.</li>
-                                <li>Git for software versioning and an agile approach to everyday tasks. Jira for task handling and work logging
-                                </li>
-                                <li>I also had the opportunity to begin working on Appian, a low-coded BPM platform. This different approach gave me another point of view on problem solving improving my lateral thinking.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="resume-title">Hobbies</h3>
-                        <div class="resume-item">
-                            <ul>
-                                <li>During my free time I enjoy playing football, petting my dog and go for walks in the nature. Since 2021 I also started beekeeping as a new personal challenge.</li>
-                                <li>Since 2018 I am also a volounteer on a local non profit association that organizes our little town fair and events.</li>
-                                <li>Certified Football coach for youth level teams, with 20 years of on-field experience.
-                                </li>
-                                <li>Certified first level guitar @ music school "Il Trillo".</li>
-                                <li>Blood and Organ donor.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <!-- End Resume Section -->
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Knowledge</h2>
-                    <p>Here you can find which technologies or softwares I had the opportunity to work with.</p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-blue">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
-                                    </path>
-                                </svg>
-                                <i class='bx bxl-html5'></i>
-                            </div>
-                            <h4><a href="">HTML 5</a></h4>
-                            <p>Experienced in web development obviously based on HTML5.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box iconbox-orange ">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
-                                    </path>
-                                </svg>
-                                <i class='bx bxl-javascript'></i>
-                            </div>
-                            <h4><a href="">JavaScript</a></h4>
-                            <p>Together with HTML and CSS helps me develop the majority of the websites I released.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box iconbox-pink">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
-                                    </path>
-                                </svg>
-                                <i class='bx bxl-css3'></i>
-                            </div>
-                            <h4><a href="">CSS</a></h4>
-                            <p>Bringing the style into websites is not my thing <span class="duckColorblinds">(I am
-                                    colorblind)</span> but sometimes it's needed.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-yellow">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
-                                    </path>
-                                </svg>
-                                <i class="bx bx-tachometer"></i>
-                            </div>
-                            <h4><a href="">Jira</a></h4>
-                            <p>Platform to organize and plan everyday's tasks and to keep track of projects progress.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box iconbox-red ">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
-                                    </path>
-                                </svg>
-                                <i class='bx bxl-microsoft'></i>
-                            </div>
-                            <h4><a href="">Microsoft Dynamics 365</a></h4>
-                            <p>Experienced in plugin development, workflow configuration and the other main features such as virtual entities, security and REST api calls.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box iconbox-teal">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
-                                    </path>
-                                </svg>
-                                <i class='bx bxl-bootstrap'></i>
-                            </div>
-                            <h4><a href="">Bootstrap</a></h4>
-                            <p>Main framework I worked with. FYI: this site is also based on Bootstrap.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-blue">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
-                                    </path>
-                                </svg>
-                                <div id="gitIcons" class="carousel slide" data-ride="carousel" data-interval="50" data-pause="false" data-wrap="true">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <i class='bx bxl-git'></i>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <i class='bx bxl-gitlab'></i>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <i class='bx bxl-github'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4><a href="">Git</a></h4>
-                            <p>Experienced in Git and some of his declinations like Gitflow. Often used Git GUIs like Git Bash, Sourcetree and GitKraken.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box iconbox-pink ">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
-                                    </path>
-                                </svg>
-                                <div id="mobileCarousel" class="carousel slide" data-ride="carousel" data-interval="50" data-pause="false" data-wrap="true">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <i class='bx bxl-android'></i>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <i class='bx bxl-apple'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4><a href="">Mobile Development</a></h4>
-                            <p>I have a minimal experience in mobile development, mainly using Xamarin and React Native to develop the core in both Systems.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box iconbox-yellow">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
-                                    </path>
-                                </svg>
-                                <i class="bx bx-tachometer"></i>
-                            </div>
-                            <h4><a href="">C#</a></h4>
-                            <p>Core of my work, works on plugins, custom workflow activities, MVC websites, functions and REST API.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-red">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
-                                    </path>
-                                </svg>
-                                <i class='bx bxs-business'></i>
-                            </div>
-                            <h4><a href="">Appian</a></h4>
-                            <p>Low coded Business Process Management tool that we use internally to manage our internal contracts approval iter.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box iconbox-orange ">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
-                                    </path>
-                                </svg>
-                                <i class='bx bx-data'></i>
-                            </div>
-                            <h4><a href="">SQL</a></h4>
-                            <p>Had the opportunity to work with SQL, T-SQL, MySQL, and DB Managers such as SQL Server Management Studio and SQL Developer .</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box iconbox-teal">
-                            <div class="icon">
-                                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                        d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
-                                    </path>
-                                </svg>
-                                <i class='bx bxl-stack-overflow'></i>
-                            </div>
-                            <h4><a href="">Stackoverflow</a></h4>
-                            <p>A developer that uses Stackoverflow on a daily basis, weird isn't it?</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            </div>
-        </section>
-        <!-- End Services Section -->
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Testimonials</h2>
-                    <p><i>Currently I have no testimonials, if you know me and would like to leave a feedback please
-                            contact me
-                            and you'll be the first in this hall of fame!</i></p>
-                </div>
-
-                <!--
-          <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section>
-   -->
-
     </main>
     <!-- End #main -->
 
@@ -768,8 +160,12 @@
                         class="bx bxl-linkedin"></i></a>
             </div>
             <div class="copyright">
-                &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved. If you find any mistakes, missing things or typos please <a target="_blank" href="mailto:luca.stucchi.96@gmail.com" class="email">notify me</a>!</br>
-                <small>This website uses Tecnhical Cookies in order to keep the user selection on theme <!-- and language-->. Cookies are deleted on browser close.</small>
+                &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved. If you find any mistakes,
+                missing things or typos please <a target="_blank" href="mailto:luca.stucchi.96@gmail.com"
+                    class="email">notify me</a>!</br>
+                <small>This website uses Tecnhical Cookies in order to keep the user selection on theme
+                    <!-- and language-->. Cookies are deleted on browser close.
+                </small>
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
@@ -805,39 +201,12 @@
 </html>
 
 <script>
-    $().ready(function() {
+    $().ready(function () {
         $.cookie('userThemePreference') !== 'night' ? ToDayMode() : ToNightMode();
-        $("#ageSpan").text(((new Date().getTime() - new Date('1996', '08', '22').getTime()) / (365 * 1000 * 3600 * 24)).toString().split('.')[0]);
-        $('#gitIcons').carousel();
-        $('#mobileCarousel').carousel();
     })
 
-    $("#changeMode").click(function() {
+    $("#changeMode").click(function () {
         debugger;
         $("#changeMode").attr("currentMode") === "day" ? ToNightMode() : ToDayMode();
     });
-
-    function ToDayMode() {
-        $.cookie('userThemePreference', 'day', {
-            expires: 7,
-            path: '/'
-        });
-        $("#proPic").attr("src", "assets/img/dayMode/profile-img.jpg");
-        $("#styleContainer").attr("href", "assets/css/dayMode.css");
-        $("#changeMode").attr("currentMode", "day");
-        $("#modeIcon").attr("class", "bx bx-moon");
-        $("#spanMode").text("Night Mode");
-    }
-
-    function ToNightMode() {
-        $.cookie('userThemePreference', 'night', {
-            expires: 7,
-            path: '/'
-        });
-        $("#proPic").attr("src", "assets/img/nightMode/profile-img.jpg");
-        $("#styleContainer").attr("href", "assets/css/nightMode.css");
-        $("#changeMode").attr("currentMode", "night");
-        $("#modeIcon").attr("class", "bx bx-sun");
-        $("#spanMode").text("Day Mode");
-    }
 </script>
