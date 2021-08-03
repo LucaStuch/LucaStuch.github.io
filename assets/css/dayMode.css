@@ -1281,3 +1281,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
     /*background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(151, 173, 216)), color-stop(0.72, rgb(77, 139, 214)), color-stop(0.86, #0563bb));*/
 }
+
+.portfolio-dark-labels {
+    color: #000 !important;
+}
