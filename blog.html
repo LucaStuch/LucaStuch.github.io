@@ -69,30 +69,29 @@
 
     <main id="main">
         <!-- ======= About Section ======= -->
-        <section id="about" class="about">
+        <!-- <section id="about" class="about">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
                     <h2>COMING SOON!</h2>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="portfolio" class="portfolio section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
                     <h2>Portfolio</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
-                        quidem hic quas.</p>
+                    <p>You can find a bunch of vaguely interesting articles about IT related matters.</p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
                         <ul id="portfolio-flters">
+                            <!-- IN BASE ALLA CLASSE DEL DIV VENGONO FILTRATE LE CARD PROPOSTE -->
                             <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
+                            <li data-filter=".filter-dynamics">Dynamics</li>
                             <li data-filter=".filter-web">Web</li>
                         </ul>
                     </div>
@@ -100,15 +99,15 @@
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
                             <img src="assets/img/portfolio/json_timezones_definitive.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4 class="portfolio-dark-labels">JSON Timezone Manipulation</h4>
-                                <p class="portfolio-dark-labels">App</p>
+                                <p class="portfolio-dark-labels">Web</p>
                                 <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/json_timezones_definitive.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="JSON Timezone Manipulation"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                    <a href="assets/img/portfolio/json_timezones_definitive.png" data-gallery="portfolioGallery" class="portfolio-lightbox portfolio-dark-labels" title="JSON Timezone Manipulation"><i class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox  portfolio-dark-labels" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +290,6 @@
     })
 
     $("#changeMode").click(function() {
-        debugger;
         $("#changeMode").attr("currentMode") === "day" ? ToNightMode() : ToDayMode();
     });
 </script>

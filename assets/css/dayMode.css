@@ -1285,3 +1285,7 @@ body::-webkit-scrollbar-thumb {
 .portfolio-dark-labels {
     color: #000 !important;
 }
+
+.gslide-title {
+    text-align: center !important;
+}
