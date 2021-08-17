@@ -1,0 +1,23 @@
+{
+    "blogItems": [
+        {
+            "title": "JsonTimeZone",
+            "headerData": {
+                "category": "WEB",
+                "date": "17 August, 2021",
+                "tags": "#web, #json, #timezone"
+            },
+            "bodyData": {
+                "content": "text content example"
+            },
+            "imgPaths": [
+                {
+                    "path": "file:///C:/Users/stucchi/Personal%20Website/LucaStuch.github.io/assets/img/portfolio/json_timezones_definitive.png"
+                },
+                {
+                    "path": "file:///C:/Users/stucchi/Personal%20Website/LucaStuch.github.io/assets/img/portfolio/json_timezones_definitive.png"
+                }
+            ]
+        }
+    ]
+}
